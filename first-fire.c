@@ -12,8 +12,10 @@
 int firePixels[FIRE_WIDTH][FIRE_HEIGHT];
 int fireColorPalette[FIRE_COLORS][3];
 
-void initializeFire() {
-	for (int x = 0; x < FIRE_WIDTH; x++) {
+void initializeFire()
+{
+	for (int x = 0; x < FIRE_WIDTH; x++)
+	{
 		for (int y = 0; y < FIRE_HEIGHT; y++)
 		{
 			firePixels[x][y] = 0;
@@ -29,16 +31,21 @@ void initializeFire() {
 	}
 }
 
-void updateFire() {
-	for (int x = 0; x < FIRE_WIDTH; x++) {
-		for (int y = 1; y < FIRE_HEIGHT; y++) {
+void updateFire()
+{
+	for (int x = 0; x < FIRE_WIDTH; x++)
+	{
+		for (int y = 1; y < FIRE_HEIGHT; y++)
+		{
 			int randIndex = rand() % 3;
 			int decay = rand() % 3;
 			int newX = x + randIndex - 1;
 
-			if (newX >= 0 && newX < FIRE_WIDTH - 1) {
+			if (newX >= 0 && newX < FIRE_WIDTH - 1)
+			{
 				int newFirePixel = firePixels[newX][y - 1] - decay;
-				if (newFirePixel < 0) {
+				if (newFirePixel < 0)
+				{
 					newFirePixel = 0;
 				}
 				firePixels[x][y] = newFirePixel;
@@ -47,8 +54,10 @@ void updateFire() {
 	}
 }
 
-void renderFire(SDL_Renderer *renderer) {
-	for (int x = 0; x < FIRE_WIDTH; x++) {
+void renderFire(SDL_Renderer *renderer)
+{
+	for (int x = 0; x < FIRE_WIDTH; x++)
+	{
 		for (int y = 0; y < FIRE_HEIGHT; y++) {
 			int firePixel = firePixels[x][y];
 			SDL_SetRenderDrawColor(renderer, fireColorPalette[firePixel][0], fireColorPalette[firePixel][1], fireColorPalette[firePixel][2], 255);
