@@ -14,4 +14,5 @@
 int firePixels[FIRE_WIDTH][FIRE_HEIGHT];
 int fireColorPalette[FIRE_COLORS][3];
 
+void initializeFire();
 #endif
