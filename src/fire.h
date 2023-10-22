@@ -15,4 +15,5 @@ int firePixels[FIRE_WIDTH][FIRE_HEIGHT];
 int fireColorPalette[FIRE_COLORS][3];
 
 void initializeFire();
+void renderFire(SDL_Renderer *renderer);
 #endif
