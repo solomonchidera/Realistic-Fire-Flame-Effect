@@ -3,3 +3,8 @@ Creating a realistic fire flame effect in C with library like OpenGL for graphic
 
 ## ???
 Render fire flame in real time.
+
+<details>
+<summary>CLICK ME</summary>
+<p>not yet ready</p>
+</details>
