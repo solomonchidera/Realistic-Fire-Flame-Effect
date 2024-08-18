@@ -6,5 +6,5 @@ Render fire flame in real time.
 
 <details>
 <summary>CLICK ME</summary>
-<p>not yet ready</p>
+<p>not yet ready, being worked on</p>
 </details>
